@@ -1,15 +1,7 @@
-console.log("测试123");
+console.log("进入index.js");
 
-var express = require('express');
-var app = express();
+// 测试log4js
+// require('./test_log4js');
 
-app.get('/', function (req, res) {
-  res.send('Hello World!');
-});
-
-var server = app.listen(3000, function () {
-  var host = server.address().address;
-  var port = server.address().port;
-
-  console.log('Example app listening at http://%s:%s', host, port);
-});
+// 测试proxy
+require("./test_proxy");
