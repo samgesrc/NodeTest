@@ -1,6 +1,6 @@
 const path = require('path');
 
-const url = 'www.baidu.com';
+const url = 'http://news.baidu.com/';
 const imgDir = path.join(__dirname, 'img');
 
 module.exports.url = url;

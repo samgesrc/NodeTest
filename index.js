@@ -28,7 +28,7 @@ console.log("进入index.js");
 // require('./test_dns');
 
 // 测试爬取网页图片
-require('./action_getNetPic/start');
+// require('./action_getNetPic/start');
 
 //测试fs
 // require('./test_fs');
