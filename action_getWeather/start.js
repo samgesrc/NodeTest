@@ -23,9 +23,36 @@ readIp(path.join(__dirname, 'ipconfig.json'), (err, data) => {
         console.error(err);
     } else {
         console.log(data);
+
+        ip2geo(data[0], (err, data) => {
+            if (err) {
+                console.error(err);
+            } else {
+                console.log(data);
+            }
+        })
     }
 })
 
-function name(params) {
-    
+function ip2geo(ip, callback) {
+    let url = 'http://www.telize.com/geoip/' + ip;
+    console.log(url);
+    request({url: url, json: true}, (err, resp, body) => {
+        callback(err, body);
+    });
+}
+
+function geo2weather(lat, lon, callback) {
+    let params = {
+        lat: lat,
+        lon: lon,
+        APPID: 'public key'
+    }
+
+    let str = qs.stringify(params);
+
+    let url = 'http://';
+    request({url: url, json: true}, (err, resp, body) => {
+        callback(err, body);
+    });
 }

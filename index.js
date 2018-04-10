@@ -30,11 +30,17 @@ console.log("进入index.js");
 // 测试爬取网页图片
 // require('./action_getNetPic/start');
 
-//测试fs
+// 测试fs
 // require('./test_fs');
 
-//测试查询天气
-// require('./action_getWeather/start');
+// 测试查询天气
+// require('./action_getWeather/start2');
+
+// 测试tcp服务器
+// require('./test_tcpserver');
+
+// 测试tcp客户端
+require('./test_tcpclient');
 
 
 
